@@ -1,5 +1,5 @@
 
-//  $(document).ready(function () {
+  $(document).ready(function () {
     //Set up some globals
     var pixSize = 1, lastPoint = null, currentColor = "fff", mouseDown = 0;
 
@@ -86,5 +86,5 @@
     pixelDataRef.on('child_added', drawPixel);
     pixelDataRef.on('child_changed', drawPixel);
     pixelDataRef.on('child_removed', clearPixel);
-//  });
+  });
   
