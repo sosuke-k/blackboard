@@ -5,7 +5,7 @@
 
     //Create a reference to the pixel data for our drawing.
     var pixelDataRef = new Firebase('https://blistering-fire-3614.firebaseio.com/');
-
+alert("getref");
     // Set up our canvas
     var myChork = document.getElementById('chork');
     var myEraser = document.getElementById('eraser');
@@ -75,6 +75,7 @@
     // Add callbacks that are fired any time the pixel data changes and adjusts the canvas appropriately.
     // Note that child_added events will be fired for initial pixel data as well.
     var drawPixel = function(snapshot) {
+alert("begindrawpixel");
       var coords = snapshot.name().split(":");
       myContext.fillStyle = "#" + snapshot.val();
       myContext.fillRect(parseInt(coords[0]) * pixSize, parseInt(coords[1]) * pixSize, pixSize, pixSize);
